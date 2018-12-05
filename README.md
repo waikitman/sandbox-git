@@ -2,9 +2,23 @@
 
 One Paragraph of project description goes here
 
-## Getting Started
+## Cheatsheet
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+```
+git remote show origin
+* remote origin
+  Fetch URL: https://github.com/waikitman/sandbox-git.git
+  Push  URL: https://github.com/waikitman/sandbox-git.git
+  HEAD branch: master
+  Remote branches:
+    feature/sbf-1 tracked
+    master        tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local refs configured for 'git push':
+    feature/sbf-1 pushes to feature/sbf-1 (up to date)
+    master        pushes to master        (up to date)
+```
 
 ### Prerequisites
 
