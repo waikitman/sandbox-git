@@ -20,16 +20,29 @@ git remote show origin
     master        pushes to master        (up to date)
 ```
 
+In scenaio below.
+* Add + commit file to testing branch. Switched to master.
+* Add + commit file to master branch. Switched to develop.
+* Add/modify + commit file to develop and ran git log command to see current state.
 ```
 git log --oneline --decorate --graph --all
-* d8459b3 (HEAD -> master) Add master-branch file
+* df593b5 (HEAD -> develop) Add develop text file
+| * d8459b3 (master) Add master-branch file
+|/  
 | * 384a451 (testing) Adding file from testing branch
 |/  
-* a89991e (origin/master, origin/develop, origin/HEAD, develop) Changing comment in file
+* a89991e (origin/master, origin/develop, origin/HEAD) Changing comment in file
 * 01d2b89 (tag: v0.0) Added a new wai file
 | * a05147d (origin/feature/sbf-1) Added file for sbf-1 branch
 |/  
 * 47bb275 Add command to cheatsheet
+* fcb3410 Added drupal 8 example.
+*   8cab6dd Merge branch 'master' of https://github.com/waikitman/sandbox-git
+|\  
+| * 1ea2a2b Change README. Add a bunch of test markup.
+* | 8a88590 (tag: v0.0-alpha) Change README. Add a bunch of test markup. Changed message using git --amend
+|/  
+* 8903a75 Initial commit
 ```
 
 ### Prerequisites
