@@ -20,7 +20,7 @@ git remote show origin
     master        pushes to master        (up to date)
 ```
 
-In scenaio below.
+In scenario below.
 * Add + commit file to testing branch. Switched to master.
 * Add + commit file to master branch. Switched to develop.
 * Add/modify + commit file to develop and ran git log command to see current state.
