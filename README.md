@@ -20,6 +20,18 @@ git remote show origin
     master        pushes to master        (up to date)
 ```
 
+```
+git log --oneline --decorate --graph --all
+* d8459b3 (HEAD -> master) Add master-branch file
+| * 384a451 (testing) Adding file from testing branch
+|/  
+* a89991e (origin/master, origin/develop, origin/HEAD, develop) Changing comment in file
+* 01d2b89 (tag: v0.0) Added a new wai file
+| * a05147d (origin/feature/sbf-1) Added file for sbf-1 branch
+|/  
+* 47bb275 Add command to cheatsheet
+```
+
 ### Prerequisites
 
 What things you need to install the software and how to install them
