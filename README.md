@@ -5,7 +5,7 @@ One Paragraph of project description goes here
 ## Cheatsheet
 
 ```
-git remote show origin
+$ git remote show origin
 * remote origin
   Fetch URL: https://github.com/waikitman/sandbox-git.git
   Push  URL: https://github.com/waikitman/sandbox-git.git
@@ -20,12 +20,15 @@ git remote show origin
     master        pushes to master        (up to date)
 ```
 
+##### Viewing log
+
 In scenario below.
 * Add + commit file to testing branch. Switched to master.
 * Add + commit file to master branch. Switched to develop.
 * Add/modify + commit file to develop and ran git log command to see current state.
+
 ```
-git log --oneline --decorate --graph --all
+$ git log --oneline --decorate --graph --all
 * df593b5 (HEAD -> develop) Add develop text file
 | * d8459b3 (master) Add master-branch file
 |/  
@@ -43,6 +46,60 @@ git log --oneline --decorate --graph --all
 * | 8a88590 (tag: v0.0-alpha) Change README. Add a bunch of test markup. Changed message using git --amend
 |/  
 * 8903a75 Initial commit
+```
+
+##### Check which branches have been merged or not.
+```
+$ git branch --merged
+* develop
+  testing
+$ git branch --no-merged
+  master
+```
+
+##### Deleting an un-merged branch.
+```
+$ git branch -d abcde
+error: The branch 'abcde' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D abcde'.
+```
+
+
+### Remote branches
+
+
+##### Create branch that tracks remote branch of the same name.
+```
+$ git checkout abcde
+Branch abcde set up to track remote branch abcde from origin.
+Switched to a new branch 'abcde'
+```
+
+##### Sync up with remote and view current status of branches
+```
+$ git fetch --all; git branch -vv
+* feature/pi-master 6ab71ca [origin/feature/pi-master] Added legacy pages for comparison tables
+  master            4648ecb [origin/master] Merge feature/pi-master into master
+Fetches latest changes to remote brances
+List out your local branches with more information including what each branch is tracking and if your local branch is ahead, behind or both.
+```
+
+##### Fetch and merge
+```
+$ git pull - is the equivalent of git fetch && git merge.
+```
+
+##### Deleting remote branch
+``` 
+$ git push origin --delete abcde
+To https://github.com/<project repo>
+ - [abcde]         serverfix
+```
+
+##### See what you’re about to push to a remote
+```
+$ git log origin/master..HEAD
+Shows you any commits in your current branch that aren’t in the master branch on your origin remote.
 ```
 
 ### Prerequisites
@@ -108,19 +165,3 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
