@@ -96,6 +96,12 @@ To https://github.com/<project repo>
  - [abcde]         serverfix
 ```
 
+##### See what you’re about to push to a remote
+```
+$ git log origin/master..HEAD
+Shows you any commits in your current branch that aren’t in the master branch on your origin remote.
+```
+
 ### Prerequisites
 
 What things you need to install the software and how to install them
